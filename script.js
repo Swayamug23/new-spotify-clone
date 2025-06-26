@@ -15,7 +15,7 @@ function formatTime(seconds) {
 async function getSongs(folder) {
     currFolder = folder
     console.log(folder)
-    let s = await fetch(`http://127.0.0.1:3000/${currFolder}/`)
+    let s = await fetch(`https://spotify-clone-project-theta.vercel.app/${currFolder}/`)
     let a = await s.text()
     console.log(a)
 
