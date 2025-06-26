@@ -1,0 +1,410 @@
+body {
+    
+    background-color: black;
+    position: relative;
+    color: white;
+    font-family: var(--encore-body-font-stack, var(--fallback-fonts, sans-serif)), sans-serif;
+}
+.invert{
+    filter: invert(1);
+}
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111; /* Matches dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;  /* Dark gray thumb */
+  border-radius: 10px;
+  border: 2px solid #111;  /* Creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;  /* Slightly lighter on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #111; /* thumb color track color */
+}
+
+.container {
+    
+    display: flex;
+    height: calc(100vh - 60px); /* Subtract navbar height */
+    margin-top: 60px;
+    overflow: hidden; /* Prevent scrolling on the container */
+    
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+   
+   height: 60px;
+    width: 100%;
+    background-color: black;
+    gap: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.icons {
+    gap: 20px;
+}
+.hamicons{
+    display: none;
+
+}
+.hamlogo,.hamhome{
+    display: none;
+}
+.hamsearchBar{
+    display: none;
+}
+.hamlogin{
+    display: none;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 26px;
+    background-color: #2a2727;
+}
+.home:hover{
+    width: 42x;
+    height: 42px;
+    background-color: #2d2929;
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+.searchBar {
+    background-color: #161616;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    gap: 110px;
+    color: #c7bdbd;
+    transition: all 0.5s ease-out;
+}
+
+.searchBar:hover{
+    background-color:#2d2b2b ;
+    /* border: 0.5px solid #2d2b2b; */
+}
+
+.searchBar1 {
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.searchBar2 {}
+
+.navEle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: grey;
+}
+
+.hover:hover{
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.ele1 {
+    gap: 8px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.ele2 {
+    gap: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.install:hover{
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.partition {
+    background-color: white;
+    height: 20px;
+    margin: 16px;
+    width: 1px;
+}
+
+.ele2 button {
+    padding: 10px;
+    height: 48px;
+    width: 115px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.hamburger{
+    display: none;
+    padding: 0px 5px;
+}
+.ele2 button:hover{
+    height: 51px;
+    width: 119px;
+    background-color: rgb(236, 232, 232);
+}
+
+.left {
+    width: 25vw;
+    
+   display: flex;
+   flex-direction: column;
+    height: 100%;
+    margin: 0px 10px 0px 8px;
+    position: relative;
+   
+    /* margin: 5px; */
+    
+    
+    overflow-y:auto ;
+    background-color: #161616;
+    border-radius: 10px;
+    
+
+
+}
+
+.close{
+    display: none;
+}
+
+.lib {
+    display: flex;
+    
+    justify-content: space-between;
+    height: 44px;
+    
+    padding: 15px;
+    
+   
+
+}
+li.playing {
+    background-color: rgb(65, 59, 59);
+}
+
+
+.songList{
+    height: 400px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.songList ul{
+    max-height: 60vh;
+}
+.songList ul li{
+    height: 40px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 10px;
+
+
+}
+.playnow{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+.info{
+    padding: 0px 5px;
+    font-size: 14px;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+footer {
+    font-size: 12px;
+    margin: 10px 14px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: grey;
+}
+
+.right {
+    
+    width: 75%;
+    height: 100%;
+    margin: 0px 10px 0px 10px;
+    background-color: #161616;
+    position: relative;
+    border-radius: 10px;
+    
+    
+
+}
+.right h1{
+    padding: 5px;
+}
+
+.spotifyPlaylist{
+    padding: 20px;
+}
+.card{
+    width: 200px;
+    padding: 10px;
+    margin: 20px 0px;
+    background-color: t#1a1919;
+    border-radius: 10px;
+    position: relative;
+    
+    
+}
+.card >*{
+    margin: 7px 0px;
+    
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.card p{
+    font-size: 13px;
+}
+.play{
+    position: absolute;
+    right: 20px;
+    top: 176px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+/* .play:hover{
+    top: 150px;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+} */
+.card:hover{
+    .play{
+        top: 150px;
+    opacity: 1; 
+    }
+}
+
+.playBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    border-radius: 10px;
+    width: 90%;
+    padding: 12px;
+    width: 70vw;
+    min-height: 40px;
+    background-color: rgb(45, 46, 45);
+   
+}
+.seekBar{
+    height: 4px;
+    width: 98%;
+    background-color: white;
+    border-radius: 10px ;
+    position: absolute;
+    bottom: 0px;
+    
+    cursor: pointer;
+}
+.songInfo{
+    width: 200px;
+}
+.circle{
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -6px;
+    left: 0%;
+    cursor: pointer;
+    transition: left 0.5s;
+}
+.songCollection{
+    /* padding: 0px 10px; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.playsong{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.timvol{
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.volume{
+    display: flex;
+    gap: 5px;
+}

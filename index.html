@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mediaQuery.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<body>
+
+    <nav class="flex nav">
+        <ul class="flex icons">
+            <li class="logo"><img src="logo.svg" alt=""></li>
+            <li>
+                <div class="home "><img src="home.svg" alt=""></div>
+            </li>
+            <li>
+                <div class="searchBar flex">
+                    <div class="flex searchBar1"><span><img src="search1.svg" alt=""></span><span>What do you want to
+                            play?</span></div>
+                    <div class="flex searchbar2">
+                        <div class="partition"></div><span><img src="search.svg" alt=""></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class=" navEle">
+            <div class="flex ele1">
+                <li class="hamburger invert"><img src="hamburger.svg" alt=""></li>
+                <li class="hover">Premium</li>
+                <li class="hover">Support</li>
+                <li class="hover">Download</li>
+            </div>
+            <div class="partition"></div>
+            <div class="flex ele2">
+                <li class="flex install"><span><img style="padding-right: 10px;" src="download.svg"
+                            alt=""></span><span>Install
+                        App</span></li>
+                <li class="hover">Sign up</li>
+                <li class="login"><button>Log in</button></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class=" container">
+        <div class="left ">
+            <ul class="hamicons">
+                <li class="hamlogo"><img src="logo.svg" alt=""></li>
+                <li style="margin-top: 7px;">
+                    <div class="hamhome "><img src="home.svg" alt=""></div>
+                </li>
+                <li>
+                    <div class="hamsearchBar flex">
+                        <div class="flex searchBar1"><span><img src="search1.svg" alt=""></span></div>
+                        <div class="flex searchbar2">
+                            <div class="partition"></div><span><img src="search.svg" alt=""></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="hamlogin"><button>Log in</button></li>
+
+            </ul>
+
+            <div class="close"><img width="25" height="30" src="close.svg" alt=""></div>
+            <div class="lib ">
+                <div>Your Library </div>
+                <div><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="songList">
+                <ul>
+
+                </ul>
+            </div>
+            <footer><a href="https://www.spotify.com/in-en/legal/">
+                    <span>Legal</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                    <span>Safety & Privacy Center</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                    <span>Cookies</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                    <span>About Ads</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/accessibility/">
+                    <span>Accessibility</span>
+                </a>
+                <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                    <span>Cookies</span>
+                </a>
+
+                <button>
+                    <span>🌐</span> English
+                </button>
+            </footer>
+
+
+        </div>
+        <div class="right">
+            <div class="spotifyPlaylist">
+                <h1>Spotify Playlist</h1>
+                <div class="cardContainer">
+                    
+
+
+                </div>
+                <div class="playBar">
+                    <div class="seekBar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+
+
+                    <div class="songInfo">
+
+                    </div>
+                    <div class="playsong">
+                        <img id="previous" class="invert" src="prev.svg" alt="">
+                        <img id="play" class="invert" src="play.svg" alt="">
+                        <img id="next" class="invert" src="next.svg" alt="">
+                    </div>
+                    <div class="timvol">
+                        <div class="volume">
+                            <img class="invert" src="volume.svg" alt="">
+                            <input type="range">
+                        </div>
+                            
+                            
+                        <div class="songTime">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

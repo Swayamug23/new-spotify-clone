@@ -1,0 +1,131 @@
+@media (max-width: 1500px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .navEle {
+    justify-content: space-between;
+  }
+
+  .left {
+
+    position: absolute;
+    top: -55px;
+    left: -120%;
+    transition: all 0.3s;
+    z-index: 2000;
+    width: 350px;
+    height: 99vh;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+  }
+
+  .lib {
+    display: flex;
+    position: absolute;
+    gap: 210px;
+    top: 74px;
+  }
+
+  .hamsearchBar {
+    display: flex;
+    align-items: center;
+    background-color: #353434;
+    border-radius: 20px;
+    width: 100px;
+    padding: 0px 13px;
+    height: 40px;
+    gap: 50px;
+    color: #c7bdbd;
+
+  }
+
+  .hamlogin {
+    display: block;
+  }
+
+  .hamlogin button {
+
+    display: flex;
+    padding-left: 13px;
+    align-items: center;
+    height: 30px;
+    width: 71px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .hamicons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 10px;
+  }
+
+  .hamlogo,
+  .hamhome {
+    display: block;
+
+  }
+
+  .songList {
+    position: absolute;
+    top: 125px;
+    height: 400px;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+
+  .playBar {
+    width: calc(100vw - 100px);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .seekBar {
+    width: calc(100vw - 80px);
+  }
+
+
+  .hamburger {
+    display: block;
+  }
+
+  .ele1 {
+    gap: 30px;
+    font-size: 14px;
+  }
+
+  .logo,
+  .home,
+  .searchBar,
+  .ele2,
+  .partition {
+    display: none;
+  }
+
+  .ele1 {
+    
+  }
+
+  .cardContainer{
+    justify-content: center;
+    gap: 0px;
+  }
+  .card{
+    margin: auto;
+            width: auto;
+  }
+
+
+}
