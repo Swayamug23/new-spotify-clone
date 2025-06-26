@@ -69,7 +69,7 @@ async function displayAlbums() {
     console.log("Displaying albums");
     let cardContainer = document.querySelector(".cardContainer");
 
-    const playlists = ["playlist1"]; // Add more if needed
+    const playlists = ["playlist1","playlist2", "Bright_(mood)","Chill_(mood)", "Dark_(mood)", "Diljit", "Angry_(mood)", "Funky_(mood)","karan aujla", "Love_(mood)"]; // Add more if needed
 
     for (let folder of playlists) {
         try {
