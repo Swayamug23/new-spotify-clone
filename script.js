@@ -14,7 +14,7 @@ async function getSongs(folder) {
     console.log(folder);
 
     try {
-        let res = await fetch(`/${currFolder}/index.json`);
+        let res = await fetch(`${currFolder}/index.json`);
         let songList = await res.json();
 
         songs = songList;
@@ -73,7 +73,7 @@ async function displayAlbums() {
 
     for (let folder of playlists) {
         try {
-            let res = await fetch(`/song/${folder}/info.json`);
+            let res = await fetch(`song/${folder}/info.json`);
             let meta = await res.json();
 
             cardContainer.innerHTML += `
