@@ -95,14 +95,14 @@ async function displayAlbums() {
     document.querySelectorAll(".card").forEach((card) => {
         card.addEventListener("click", async () => {
             console.log("Fetching Songs");
-            songs = await getSongs(`song/${card.dataset.folder}`);
+            songs = await getSongs(`${card.dataset.folder}`);
             playMusic(songs[0]);
         });
     });
 }
 
 async function main() {
-    await getSongs("song/playlist1");
+    await getSongs("playlist1");
     await displayAlbums();
     playMusic(songs[0], true);
 
