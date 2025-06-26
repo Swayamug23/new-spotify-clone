@@ -11,23 +11,31 @@ function formatTime(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    console.log(folder);
+    songs = [];
 
     try {
-        let res = await fetch(`${currFolder}`);
-        let songList = await res.json();
+        const res = await fetch(`/${folder}/`);
+        const html = await res.text();
+        const div = document.createElement("div");
+        div.innerHTML = html;
+        const links = div.getElementsByTagName("a");
 
-        songs = songList;
+        for (let a of links) {
+            if (a.href.endsWith(".mp3")) {
+                const songName = decodeURIComponent(a.href.split(`/${folder}/`)[1]);
+                songs.push(songName);
+            }
+        }
 
-        let songul = document.querySelector(".songList ul");
-        songul.innerHTML = "";
-
+        // Show songs
+        let songUL = document.querySelector(".songList ul");
+        songUL.innerHTML = "";
         for (const song of songs) {
-            songul.innerHTML += `
+            songUL.innerHTML += `
                 <li data-track="${song}">
                     <img src="music.svg" alt="">
                     <div class="info">
-                        <div>${song.replaceAll("%20", " ")}</div>
+                        <div>${song}</div>
                         <div>swayam</div>
                     </div>
                     <div class="playnow">
@@ -37,19 +45,23 @@ async function getSongs(folder) {
                 </li>`;
         }
 
-        document.querySelectorAll(".songList li").forEach((li) => {
+        // Attach listeners to each list item
+        document.querySelectorAll(".songList li").forEach(li => {
             li.addEventListener("click", () => playMusic(li.dataset.track));
         });
 
         return songs;
-    } catch (error) {
-        console.error("Failed to fetch songs:", error);
+
+    } catch (err) {
+        console.error("Error fetching songs:", err);
         return [];
     }
 }
 
+
 const playMusic = (track, pause = false) => {
-    currentSong.src = `/${currFolder}/${track}`;
+    const audioPath = `/${currFolder}/${track}`;
+    currentSong.src = audioPath;
     if (!pause) {
         currentSong.play();
         play.src = "pause.svg";
@@ -57,13 +69,14 @@ const playMusic = (track, pause = false) => {
     document.querySelector(".songInfo").innerText = decodeURI(track);
     document.querySelector(".songTime").innerText = "00:00 / 00:00";
 
-    document.querySelectorAll(".songList li").forEach((li) => {
+    document.querySelectorAll(".songList li").forEach(li => {
         li.classList.remove("playing");
         if (decodeURIComponent(li.dataset.track) === decodeURIComponent(track)) {
             li.classList.add("playing");
         }
     });
 };
+
 
 async function displayAlbums() {
     console.log("Displaying albums");
