@@ -15,7 +15,7 @@ function formatTime(seconds) {
 async function getSongs(folder) {
     currFolder = folder
     console.log(folder)
-    let s = await fetch(`/${currFolder}/`)
+    let s = await fetch(`/${currFolder}/index.json`)
     let a = await s.text()
     console.log(a)
 
