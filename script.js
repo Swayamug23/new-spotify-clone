@@ -127,7 +127,7 @@ async function displayAlbums() {
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
             console.log("Fetching Songs")
-            songs = await getSongs(`/song/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`song/${item.currentTarget.dataset.folder}`)
             playMusic(songs[0])
 
         })
@@ -137,7 +137,7 @@ async function displayAlbums() {
 async function main() {
 
 
-    await getSongs("/song/playlist1")
+    await getSongs("song/playlist1")
     await displayAlbums()
     playMusic(songs[0], true)
 
