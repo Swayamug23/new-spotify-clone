@@ -111,16 +111,16 @@ async function main() {
     playMusic(songs[0], true);
 
     document.getElementById("play").addEventListener("click", () => {
-        const currentTrack = currentSong.src.split("/").pop();
-        if (currentSong.paused) {
-            playMusic(currentTrack, true);
-            currentSong.play();
-            document.getElementById("play").src = "pause.svg";
-        } else {
-            currentSong.pause();
-            document.getElementById("play").src = "play.svg";
-        }
-    });
+    const currentTrack = currentSong.src.split("/").pop();
+    if (currentSong.paused) {
+        // playMusic(currentTrack, true); 
+        currentSong.play();              
+        document.getElementById("play").src = "pause.svg";
+    } else {
+        currentSong.pause();
+        document.getElementById("play").src = "play.svg";
+    }
+});
 
     currentSong.addEventListener("timeupdate", () => {
         document.querySelector(".songTime").innerText =
