@@ -87,7 +87,7 @@
 
 
   .playBar {
-    width: calc(100vw - 100px);
+    width: calc(100vw - 85px);
     flex-direction: column;
     gap: 10px;
   }
@@ -121,6 +121,7 @@
   .cardContainer{
     justify-content: center;
     gap: 0px;
+    max-height: 55vh;
   }
   .card{
     margin: auto;

@@ -82,7 +82,7 @@ async function displayAlbums() {
     console.log("Displaying albums");
     let cardContainer = document.querySelector(".cardContainer");
 
-    const playlists = ["playlist1"]; // Add more if needed
+    const playlists = ["playlist1","playlist2"]; // Add more if needed
 
     for (let folder of playlists) {
         try {

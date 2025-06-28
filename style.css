@@ -372,6 +372,7 @@ footer a {
 }
 .songInfo{
     width: 200px;
+        text-align: center;
 }
 .circle{
     height: 15px;
